@@ -1,12 +1,11 @@
 int[] x_list;
 int[] y_list;
 int now_length;
-final int point_length = 10000;
-final float hi = 0.6;
-//final float naibun_bunbo = 10*hi + 10;
+final int point_length = 10000; //変えると楽しい
+final float hi = 0.6; // 0 < hi < 1、変えると楽しい
 
-final int[] first_x = {300,0  ,600};
-final int[] first_y = {0  ,519,519};
+final int[] first_x = {300,0  ,600}; //最初の形の頂点
+final int[] first_y = {0  ,519,519}; //同じ
 
 void setup() {
   size(800,800);
@@ -33,9 +32,6 @@ void setup() {
 }
 
 void draw() {
-  //if(!isPreparePoint){
-  //  return;
-  //}
   translate(100,100); //注意
   for(int i =0;i<100;i++) {
     int rand = int(random(3));
@@ -55,16 +51,6 @@ void draw() {
     }
   }
 }
-
-//void mouseClicked() {
-//  if(!isPreparePoint) {
-//    x_list[3] = mouseX;
-//    y_list[3] = mouseY;
-//    big_point(x_list[3],y_list[3]);
-//    now_length = 4;
-//    isPreparePoint = true;
-//  }
-//}
 
 void big_point(int x,int y) {
   int point_size = 4;
